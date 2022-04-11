@@ -47,9 +47,9 @@ a {
     transition: all 0.5 ease-out;
 }
 
-a:hover {
+/* a:hover {
     opacity: 0.75;
-}
+} */
 
 h1 {
     margin: 0;
@@ -93,7 +93,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: var(--hero-atachment);
+    background-attachment: var(--hero-attachment);
 }
 
 .hero-image-opacity {
@@ -154,6 +154,30 @@ p {
 .menu a:hover {
     color: var(--white-color);
     background-color: var(--first-color);
+}
+
+.dark-theme-btn {
+    position: relative;
+    background-color: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.dark-theme-btn:hover {
+    /* background-color: var(--first-color); */
+    transition: background-color 500ms ease-in-out;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: var(--white-color);
 }
 
 @media screen and (min-width: 1024px) {
@@ -301,6 +325,20 @@ p {
     text-decoration: none;
 }
 
+:is(.logo,.btn):hover {
+    animation: menu-animate 600ms linear infinite alternate;
+}
+
+@keyframes menu-animate {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.05);
+    }
+}
+
 .service-card {
     margin: 1rem auto;/*Aplica 1rem arriba y abajo y automático a los dos lados, esto hace que los elementos se centren*/
     padding: 1rem;
@@ -436,6 +474,11 @@ p {
     .notion,
     .slack) > p {
         margin-left: .5rem;
+    }
+
+    .menu>.dark-theme-btn:hover {
+        color: var(--white-color);
+        background-color: var(--first-color);
     }
 
     .services > .container {
