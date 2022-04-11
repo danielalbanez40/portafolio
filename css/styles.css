@@ -115,7 +115,7 @@ p {
 .menu-btn {
     outline: thin solid var(--first-color);
     border: 0;
-    border-radius: .17rem;
+    border-radius: 0.17rem;
     cursor: pointer;
     background-color: var(--second-color);
 }
@@ -397,6 +397,14 @@ p {
 
 /*Version para tablets*/
 @media screen and (min-width: 768px) {
+
+    .habilities {
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        justify-content: flex-end;
+        align-content: space-between;
+    }
+
     .services > .container {
         display: grid;
         grid-template-columns: repeat(2,45%);
@@ -436,7 +444,7 @@ p {
         display: grid;
         grid-template-columns: repeat(3, 30%);
         justify-content: space-between;
-        align-content: center;
+        align-content: space-between;
         gap: 1.5rem;
         /* display: flex;
         flex-direction: row;
@@ -456,10 +464,15 @@ p {
     .gitHub,
     .notion,
     .slack {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+        
+        /* display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: center; */
     }
 
     :is(.html-logo,
@@ -476,7 +489,7 @@ p {
         margin-left: .5rem;
     }
 
-    .menu>.dark-theme-btn:hover {
+    .menu > .dark-theme-btn:hover {
         color: var(--white-color);
         background-color: var(--first-color);
     }

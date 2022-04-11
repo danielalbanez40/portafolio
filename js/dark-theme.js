@@ -28,14 +28,15 @@ const darkMode = () => {
 
   //Delegación de eventos al DOM
   d.addEventListener("click", (e) => {
-
     //Detecto el cambio al click en el boton
     if (e.target.matches(btn)) {
-        //Ingreso a la propiedad textContent del boton y la comparo con la de la variable moon
+      e.preventDefault();//prevengo comportamiento por defecto para que cada vez que cambie el tema no me lleve a inicio y se quede en la sección que corresponda
+      //Ingreso a la propiedad textContent del boton y la comparo con la de la variable moon
       if ($themeBtn.textContent === moon ? darkMode() : lightMode());
 
     }
   });
+
   /*Local Storage */
   d.addEventListener("DOMContentLoaded", (e) => {
     //comprueba si existe la variable theme del local Storage y si no la crea
