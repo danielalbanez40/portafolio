@@ -205,11 +205,62 @@ p {
     max-width: var(--max-width);
 }
 
+.gray-scale {
+    filter: grayscale(1);
+}
+
 .none {
     display: none;
 }
 
+.section {
+    padding: 2rem 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .full-lg-screen {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .text-lg-center {
+        text-align: center;
+    }
+    
+    .text-lg-left {
+        text-align: left;
+    }
+    
+    .text-lg-right {
+        text-align: right;
+    }
+
+}
+
 /*---------------- Site Styles -----------------------*/
+
+.about > article {
+    margin-bottom: 2rem;
+}
+
+.frontend, 
+.backend,
+.others {
+    margin-top: 1rem;
+}
 
 .header {
     position: fixed;
@@ -235,17 +286,117 @@ p {
     text-decoration: none;
 }
 
+
+.habilities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.html-logo,
+.css-logo,
+.js-logo,
+.bootstrap-logo,
+.php-logo,
+.laravel-logo,
+.my-sql,
+.git,
+.gitHub,
+.notion,
+.slack {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+:is(
+    .html-logo,
+    .css-logo,
+    .js-logo,
+    .bootstrap-logo,
+    .php-logo,
+    .laravel-logo,
+    .my-sql,
+    .git,
+    .gitHub,
+    .notion,
+    .slack
+    )>p {
+    margin-left: .5rem;
+}
+
 /*Version para tablets*/
 @media screen and (min-width: 768px) {}
 
 /*Version Desktop*/
 @media screen and (min-width: 1024px) {
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .btn-cv {
+        display: flex;
+        justify-content: center;
+    }
+
     .header {
         position: sticky;
         top: 0;
         padding: .5rem;
         height: calc(var(--header-height) - 0.5rem);
     }
+
+    .habilities {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+        gap: 1.5rem;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%; */
+    }
+
+    .html-logo,
+    .css-logo,
+    .js-logo,
+    .bootstrap-logo,
+    .php-logo,
+    .laravel-logo,
+    .my-sql,
+    .git,
+    .gitHub,
+    .notion,
+    .slack {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    :is(.html-logo,
+    .css-logo,
+    .js-logo,
+    .bootstrap-logo,
+    .php-logo,
+    .laravel-logo,
+    .my-sql,
+    .git,
+    .gitHub,
+    .notion,
+    .slack) > p {
+        margin-left: .5rem;
+    }
+
 
 }
 
