@@ -7,7 +7,7 @@
     --third-color: #501464;
     --third-alpha-color: rgba(80,20,100,0.75);
     --white-color: #fff;
-    --gray-lite-color: #f3f3f3;
+    --gray-light-color: #f3f3f3;
     --gray-color: #ccc;
     --gray-dark-color: #666;
     --black-color: #000;
@@ -183,6 +183,11 @@ p {
 }
 
 /*---------------- Utilities --------------------*/
+
+.bg-gray-light {
+  background-color: var(--gray-light-color);  
+}
+
 .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,0.25);
 }
@@ -215,6 +220,16 @@ p {
 
 .section {
     padding: 2rem 1rem;
+}
+
+.section-title {
+    border-top: thin solid var(--first-color);
+    border-bottom: thin solid var(--first-color);
+    width: 250px;
+    margin: 2rem auto;/*centra el elemento*/
+    padding: .5rem 1rem;
+    text-align: center;
+    color: var(--title-color);
 }
 
 .text-center {
@@ -286,6 +301,20 @@ p {
     text-decoration: none;
 }
 
+.service-card {
+    margin: 1rem auto;/*Aplica 1rem arriba y abajo y automático a los dos lados, esto hace que los elementos se centren*/
+    padding: 1rem;
+    text-align: center;
+}
+
+.service-card h3 {
+    color: var(--title-color);
+}
+
+.service-card svg {
+    fill: var(--first-color);
+    margin-bottom: 1.25rem;
+}
 
 .habilities {
     display: flex;
@@ -329,7 +358,19 @@ p {
 }
 
 /*Version para tablets*/
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .services > .container {
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .services .section-title {
+        grid-column: span 2;
+    }
+
+}
 
 /*Version Desktop*/
 @media screen and (min-width: 1024px) {
@@ -397,6 +438,13 @@ p {
         margin-left: .5rem;
     }
 
+    .services > .container {
+        grid-template-columns: repeat(3, 30%);
+    }
+    
+    .services .section-title {
+        grid-column: span 3;
+    }
 
 }
 
