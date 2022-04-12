@@ -206,6 +206,45 @@ p {
     }
 }
 
+/*---------------- Modal --------------------*/
+
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-alpha-color);
+    z-index: 995;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+}
+
+.modal[id|="trabajo"]:target {/*id|="trabajo" Esto selecciona todos los elementos que empiecen con la palabra trabajo*/
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /*---------------- Utilities --------------------*/
 
 .bg-gray-light {
@@ -380,6 +419,31 @@ p {
     border: thin solid var(--white-color);
 }
 
+.portfolio-modal {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--white-color);
+    max-width: 400px;
+}
+
+.portfolio-modal h3 {
+    padding: .5rem 0;
+    margin: 1rem auto;
+    color: var(--title-color);
+    border-bottom: medium solid var(--first-color);
+}
+
+.portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+    color: var(--first-color);
+}
+
 .service-card {
     margin: 1rem auto;/*Aplica 1rem arriba y abajo y automático a los dos lados, esto hace que los elementos se centren*/
     padding: 1rem;
@@ -453,6 +517,17 @@ p {
 
     .portfolio .section-title {
         grid-column: span 2;
+    }
+
+    .portfolio-modal {
+        flex-direction: row;
+        max-width: 800px;
+    }
+    
+    .portfolio-info {
+        margin-left: 1rem;
+        align-self: center;
+
     }
 
     .services > .container {
