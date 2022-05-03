@@ -13,8 +13,8 @@
             method:"POST",
             body: new FormData(e.target) //Especifico la informacion que se envía para serializar los datos y los envíe a la peticion de formsubmit
         })
-        .then(res => res.ok ? res.json(): Promise.reject(res))
-        .then(json => {
+        .then((res) => res.ok ? res.json(): Promise.reject(res))
+        .then((json) => {
 
             // console.log(json)
             $loader.classList.add("none");

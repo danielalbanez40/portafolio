@@ -440,11 +440,18 @@ p {
     margin-top: -1rem;
 }
 
-
 .frontend, 
 .backend,
 .others {
     margin-top: 1rem;
+}
+
+.footer {
+    margin-bottom: var(--header-height);
+    background-color: var(--third-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .header {
@@ -686,6 +693,10 @@ p {
         gap: 1rem;
     }
 
+    .footer {
+        margin-bottom: 0;
+    }
+    
     .header {
         position: sticky;
         top: 0;
