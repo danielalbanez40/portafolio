@@ -5,6 +5,8 @@ const darkTheme = (btn, classDark) => {
   /*Obtengo las clases correspondientes y creo el atributo data-dark en mi HTML*/
   const $themeBtn = d.querySelector(btn);
   const $selectors = d.querySelectorAll("[data-dark]");
+  const $inputform = d.querySelectorAll("input");
+
   let moon = "🌙";
   let sun = "☀️";
 

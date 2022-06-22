@@ -30,11 +30,10 @@
         }).finally(() => {
             $loader.classList.add("none");
             setTimeout(() => {
-                location.hash = "#cose";
+                location.hash = "#close";
             }, 3000);
         });
         
-
     });
 
 

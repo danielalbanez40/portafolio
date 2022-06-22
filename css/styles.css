@@ -180,8 +180,36 @@ p {
     background-attachment: var(--hero-attachment);
 }
 
+.hero-image-content  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.hero-image-content h2 {
+    padding: 3rem;
+}
+
+
+.arrow {
+   padding: 2rem;
+}
+
+.hero-image-opacity svg {
+    fill: var(--white-color);
+    width: 4rem;
+    height: 4rem;
+}
+
+.hero-image-opacity a:hover {
+    transition: transform 300ms ease;
+    transform: translateY(1rem);
+}
+
 .hero-image-opacity {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -240,7 +268,7 @@ p {
     background-color: var(--first-color);
 }
 
-.dark-theme-btn {
+/* .dark-theme-btn {
     position: relative;
     background-color: #343d5b;
     border-radius: 1000px;
@@ -252,16 +280,16 @@ p {
     outline: none;
     width: 60px;
     margin: 0 auto;
-}
+} */
 
-.dark-theme-btn:hover {
+/* .dark-theme-btn:hover {
     /* background-color: var(--first-color); */
-    transition: background-color 500ms ease-in-out;
-}
+    /* transition: background-color 500ms ease-in-out;
+} */ 
 
 .dark-mode {
     background-color: #333;
-    color: var(--white-color);
+    color: var(--white-color)!important;
 }
 
 @media screen and (min-width: 1024px) {
@@ -754,10 +782,10 @@ p {
         margin-left: .5rem;
     }
 
-    .menu > .dark-theme-btn:hover {
+    /* .menu > .dark-theme-btn:hover {
         color: var(--white-color);
         background-color: var(--first-color);
-    }
+    } */
 
     .portfolio > .container {
         grid-template-columns: repeat(3, 1fr);
