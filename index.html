@@ -341,7 +341,6 @@
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                                 <title>github</title>
-                                <desc>Created with sketchtool.</desc>
                                 <g id="brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g id="github" fill="#000000">
                                         <path
@@ -415,8 +414,7 @@
                     <h3>Programación <i>Web</i></h3>
                     <p>
                         Desarrollo de sitios y aplicaciones para plataformas <i>Web</i>.
-                        Te ayudo a construir tu proyecto de principio a fin: <i>FrontEnd</i>, <i>Backend</i>
-                        y Base de Datos.
+                        Te ayudo a construir tu nuevo sitio web: Me encargo del desarrollo <i>FrontEnd</i>
                     </p>
                 </article>
                 <article class="service-card" data-aos="zoom-in">
@@ -716,7 +714,7 @@
 
         <section id="contacto" class="contact section">
             <div class="container">
-                <h2 class="section-title"> ¿Interesado? </h2>
+                <h2 class="section-title"> ¿Interesad@? </h2>
                 
                 <article class="contact-cards">
                     
@@ -735,7 +733,7 @@
                                 d="M16.018,3.815L15.232,8h-4.966l0.716-3.815L9.018,3.815L8.232,8H4v2h3.857l-0.751,4H3v2h3.731l-0.714,3.805l1.965,0.369 L8.766,16h4.966l-0.714,3.805l1.965,0.369L15.766,16H20v-2h-3.859l0.751-4H21V8h-3.733l0.716-3.815L16.018,3.815z M14.106,14H9.141 l0.751-4h4.966L14.106,14z" />
                         </svg>
 
-                        <h5>SOCIAL MEDIA</h5>
+                        <h5>CONOCE UN POCO MÁS DE MI</h5>
                         <small class="social-media">
                             <a href="https://github.com/danielalbanez40" target="_blank" rel="noopener">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -754,23 +752,28 @@
                     </aside>
                 </article>
 
-                <form class="contact-form box-shadow-1" data-aos="zoom-in">
+                <form class="contact-form box-shadow-1" data-aos="zoom-in" id="contact-form">
                     <input type="text" name="name" placeholder="Ingresa tu nombre *"
                         title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                        required>
+                    <input type="text" name="lastname" placeholder="Ingresa tu apellido *"
+                        title="Apellido sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                         required>
                     <input type="email" name="email" placeholder="Ingresa tu correo *" title="Email incorrecto"
                         pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
                     <textarea name="comments" cols="50" rows="10" placeholder="Déjame tus comentarios *"></textarea>
-                    <div class="contact-form-loader text-center none">
+                    <!-- <div class="contact-form-loader text-center none">
                         <img src="assets/loader.svg" alt="Cargando...">
-                    </div>
-                    <input type="submit" value="ENVIAR MENSAJE" class="btn">
+                    </div> -->
+                    <input type="submit" value="ENVIAR MENSAJE" class="btn" id="btn-contact-form">
                 </form>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script src="./js/EmailJs.js"></script>
 
-                <article id="gracias" class="modal">
+                <!-- <article id="gracias" class="modal">
                     <div class="modal-content">
                         <article class="contact-form-response">
-                            <h3>¡Muchas Gracias por tus comentarios!</h3>
+                            <h3>¡Muchas Gracias por dejar tus comentarios!</h3>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z" />
                                 <path
@@ -780,7 +783,7 @@
                             </svg>
                         </article>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
 
@@ -794,9 +797,11 @@
     <script>
         AOS.init();
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/menu.js" rel="norreferer"></script>
-    <script src="js/contactForm.js" rel="norreferer"></script>
+    <!-- <script src="js/contactForm.js" rel="norreferer"></script> -->
     <script src="js/index.js" type="module" rel="norreferer"></script>
+    <script src="./js/email.js"></script>
 </body>
 
 </html>
