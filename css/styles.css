@@ -172,7 +172,7 @@ p {
 
 /*---------------- Hero  Image --------------------*/
 .hero-image {
-  background-image: url('../assets/hero-image-home.jpg');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/portfolio-7a265.appspot.com/o/assets%2Fimages%2Fhero-image-home.jpg?alt=media&token=8b48350a-c89a-48c3-b99d-23abb4096ab8');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
